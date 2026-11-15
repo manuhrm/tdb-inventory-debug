@@ -1,0 +1,935 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FGenericCrashContext>
+<RuntimeProperties>
+<CrashVersion>3</CrashVersion>
+<ExecutionGuid>77B931D34E6D70BB919D51A5C0B9B926</ExecutionGuid>
+<CrashGUID>UECC-Windows-159F6FF94E84B4BF5AB05DA93E9C94F7_0000</CrashGUID>
+<IsEnsure>false</IsEnsure>
+<IsStall>false</IsStall>
+<IsAssert>false</IsAssert>
+<CrashType>Crash</CrashType>
+<ErrorMessage>Unhandled Exception: EXCEPTION_ACCESS_VIOLATION 0x00000037889fe2e0</ErrorMessage>
+<CrashReporterMessage></CrashReporterMessage>
+<ProcessId>23076</ProcessId>
+<SecondsSinceStart>0</SecondsSinceStart>
+<IsInternalBuild>false</IsInternalBuild>
+<IsPerforceBuild>false</IsPerforceBuild>
+<IsSourceDistribution>false</IsSourceDistribution>
+<GameName>UE-Survival</GameName>
+<ExecutableName>TheDayBefore</ExecutableName>
+<BuildConfiguration>Shipping</BuildConfiguration>
+<GameSessionID></GameSessionID>
+<PlatformName>WindowsClient</PlatformName>
+<PlatformNameIni>Windows</PlatformNameIni>
+<EngineMode>Game</EngineMode>
+<EngineModeEx>Unset</EngineModeEx>
+<DeploymentName></DeploymentName>
+<EngineVersion>5.2.1-0+UE5</EngineVersion>
+<CommandLine> -nullrhi -nosound -Port=7777 -FullStdOutLogOutput</CommandLine>
+<LanguageLCID>0</LanguageLCID>
+<AppDefaultLocale>es-ES</AppDefaultLocale>
+<BuildVersion>UE5-CL-0</BuildVersion>
+<Symbols>UE5-CL-0-Win64-Shipping</Symbols>
+<IsUERelease>true</IsUERelease>
+<IsRequestingExit>false</IsRequestingExit>
+<UserName></UserName>
+<BaseDir>G:/The Day Before (1372880)/The Day Before/Survival/Binaries/Win64/</BaseDir>
+<RootDir>G:/The Day Before (1372880)/The Day Before/</RootDir>
+<MachineId>E0D3F9FA45B8419A710A32959945AC71</MachineId>
+<LoginId>e0d3f9fa45b8419a710a32959945ac71</LoginId>
+<EpicAccountId>885c64d5ec9a4e609f503ec45488e085</EpicAccountId>
+<SourceContext></SourceContext>
+<UserDescription></UserDescription>
+<UserActivityHint></UserActivityHint>
+<CrashDumpMode>0</CrashDumpMode>
+<GameStateName></GameStateName>
+<Misc.NumberOfCores>8</Misc.NumberOfCores>
+<Misc.NumberOfCoresIncludingHyperthreads>16</Misc.NumberOfCoresIncludingHyperthreads>
+<Misc.Is64bitOperatingSystem>1</Misc.Is64bitOperatingSystem>
+<Misc.CPUVendor>AuthenticAMD</Misc.CPUVendor>
+<Misc.CPUBrand>AMD Ryzen 7 5700G with Radeon Graphics         </Misc.CPUBrand>
+<Misc.PrimaryGPUBrand>AMD Radeon RX 6600</Misc.PrimaryGPUBrand>
+<Misc.OSVersionMajor>Windows 11 (25H2) [10.0.26200.8117]</Misc.OSVersionMajor>
+<Misc.OSVersionMinor></Misc.OSVersionMinor>
+<MemoryStats.TotalPhysical>34144624640</MemoryStats.TotalPhysical>
+<MemoryStats.TotalVirtual>36292108288</MemoryStats.TotalVirtual>
+<MemoryStats.PageSize>4096</MemoryStats.PageSize>
+<MemoryStats.TotalPhysicalGB>32</MemoryStats.TotalPhysicalGB>
+<MemoryStats.AvailablePhysical>0</MemoryStats.AvailablePhysical>
+<MemoryStats.AvailableVirtual>0</MemoryStats.AvailableVirtual>
+<MemoryStats.UsedPhysical>0</MemoryStats.UsedPhysical>
+<MemoryStats.PeakUsedPhysical>0</MemoryStats.PeakUsedPhysical>
+<MemoryStats.UsedVirtual>0</MemoryStats.UsedVirtual>
+<MemoryStats.PeakUsedVirtual>0</MemoryStats.PeakUsedVirtual>
+<MemoryStats.bIsOOM>0</MemoryStats.bIsOOM>
+<MemoryStats.OOMAllocationSize>0</MemoryStats.OOMAllocationSize>
+<MemoryStats.OOMAllocationAlignment>0</MemoryStats.OOMAllocationAlignment>
+<NumMinidumpFramesToIgnore>0</NumMinidumpFramesToIgnore>
+<CallStack></CallStack>
+<PCallStack>
+
+tbb           0x0000000180000000 + 36089fe2e0      
+tbb           0x0000000180000000 + 36089ff320      
+Unknown       0x0000000000000000 + 1000            
+tbb           0x0000000180000000 + 36089ff360      
+TheDayBefore  0x00007ff668a00000 + 5596bc9         
+TheDayBefore  0x00007ff668a00000 + 5592851         
+TheDayBefore  0x00007ff668a00000 + 5594d4f         
+TheDayBefore  0x00007ff668a00000 + 212bc79         
+TheDayBefore  0x00007ff668a00000 + 212085b         
+TheDayBefore  0x00007ff668a00000 + 2214ab8         
+TheDayBefore  0x00007ff668a00000 + 3c10328         
+TheDayBefore  0x00007ff668a00000 + 3c11d0f         
+TheDayBefore  0x00007ff668a00000 + 211d847         
+TheDayBefore  0x00007ff668a00000 + 211f0f3         
+TheDayBefore  0x00007ff668a00000 + 2121d4e         
+TheDayBefore  0x00007ff668a00000 + 211b2a7         
+TheDayBefore  0x00007ff668a00000 + 2130f64         
+TheDayBefore  0x00007ff668a00000 + 211ee80         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</PCallStack>
+<PCallStackHash>76F367F846DAE535B764CC10EB495811C7E14567</PCallStackHash>
+<Threads><Thread><CallStack>ntdll         0x00007ffec0ba0000 + 1620e4          
+ntdll         0x00007ffec0ba0000 + d1014           
+KERNELBASE    0x00007ffebe1c0000 + a2fcb           
+TheDayBefore  0x00007ff668a00000 + 22f6e90         
+TheDayBefore  0x00007ff668a00000 + 2429b7d         
+TheDayBefore  0x00007ff668a00000 + 2429a2a         
+TheDayBefore  0x00007ff668a00000 + 242f71e         
+TheDayBefore  0x00007ff668a00000 + 2434670         
+TheDayBefore  0x00007ff668a00000 + 2433f30         
+TheDayBefore  0x00007ff668a00000 + 40c49e1         
+TheDayBefore  0x00007ff668a00000 + 9d00df          
+TheDayBefore  0x00007ff668a00000 + 9dbd76          
+TheDayBefore  0x00007ff668a00000 + 9dbeca          
+TheDayBefore  0x00007ff668a00000 + 9dcd40          
+TheDayBefore  0x00007ff668a00000 + 9e6b04          
+TheDayBefore  0x00007ff668a00000 + 57be7e2         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>18060</ThreadID>
+<ThreadName>GameThread</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 213036d         
+TheDayBefore  0x00007ff668a00000 + 21310e5         
+TheDayBefore  0x00007ff668a00000 + 211ee80         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>13988</ThreadID>
+<ThreadName>Foreground Worker #0</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 213036d         
+TheDayBefore  0x00007ff668a00000 + 21310e5         
+TheDayBefore  0x00007ff668a00000 + 211ee80         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>24020</ThreadID>
+<ThreadName>Foreground Worker #1</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 227ce5c         
+TheDayBefore  0x00007ff668a00000 + 59a7237         
+VCRUNTIME140  0x00007ffeac5a0000 + f55d            
+ntdll         0x00007ffec0ba0000 + 16619f          
+ntdll         0x00007ffec0ba0000 + 12397           
+ntdll         0x00007ffec0ba0000 + 165ade          
+tbb           0x0000000180000000 + 36089fe2e0      
+tbb           0x0000000180000000 + 36089ff320      
+Unknown       0x0000000000000000 + 1000            
+tbb           0x0000000180000000 + 36089ff360      
+TheDayBefore  0x00007ff668a00000 + 5596bc9         
+TheDayBefore  0x00007ff668a00000 + 5592851         
+TheDayBefore  0x00007ff668a00000 + 5594d4f         
+TheDayBefore  0x00007ff668a00000 + 212bc79         
+TheDayBefore  0x00007ff668a00000 + 212085b         
+TheDayBefore  0x00007ff668a00000 + 2214ab8         
+TheDayBefore  0x00007ff668a00000 + 3c10328         
+TheDayBefore  0x00007ff668a00000 + 3c11d0f         
+TheDayBefore  0x00007ff668a00000 + 211d847         
+TheDayBefore  0x00007ff668a00000 + 211f0f3         
+TheDayBefore  0x00007ff668a00000 + 2121d4e         
+TheDayBefore  0x00007ff668a00000 + 211b2a7         
+TheDayBefore  0x00007ff668a00000 + 2130f64         
+TheDayBefore  0x00007ff668a00000 + 211ee80         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>true</IsCrashed>
+<Registers></Registers>
+<ThreadID>20832</ThreadID>
+<ThreadName>Background Worker #2</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 1656b4          
+ntdll         0x00007ffec0ba0000 + af4f            
+ntdll         0x00007ffec0ba0000 + c66f            
+ntdll         0x00007ffec0ba0000 + d8e2            
+TheDayBefore  0x00007ff668a00000 + 3c10520         
+TheDayBefore  0x00007ff668a00000 + 3c11d0f         
+TheDayBefore  0x00007ff668a00000 + 211d847         
+TheDayBefore  0x00007ff668a00000 + 211f0f3         
+TheDayBefore  0x00007ff668a00000 + 2121d4e         
+TheDayBefore  0x00007ff668a00000 + 211b2a7         
+TheDayBefore  0x00007ff668a00000 + 2130f64         
+TheDayBefore  0x00007ff668a00000 + 211ee80         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>23976</ThreadID>
+<ThreadName>Background Worker #3</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 1656b4          
+ntdll         0x00007ffec0ba0000 + af4f            
+ntdll         0x00007ffec0ba0000 + c66f            
+ntdll         0x00007ffec0ba0000 + d8e2            
+TheDayBefore  0x00007ff668a00000 + 3c10520         
+TheDayBefore  0x00007ff668a00000 + 3c11d0f         
+TheDayBefore  0x00007ff668a00000 + 211d847         
+TheDayBefore  0x00007ff668a00000 + 211f0f3         
+TheDayBefore  0x00007ff668a00000 + 2121d4e         
+TheDayBefore  0x00007ff668a00000 + 211b2a7         
+TheDayBefore  0x00007ff668a00000 + 2130f64         
+TheDayBefore  0x00007ff668a00000 + 211ee80         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>22668</ThreadID>
+<ThreadName>Background Worker #4</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 1656b4          
+ntdll         0x00007ffec0ba0000 + af4f            
+ntdll         0x00007ffec0ba0000 + c66f            
+ntdll         0x00007ffec0ba0000 + d8e2            
+TheDayBefore  0x00007ff668a00000 + 3c10520         
+TheDayBefore  0x00007ff668a00000 + 3c11d0f         
+TheDayBefore  0x00007ff668a00000 + 211d847         
+TheDayBefore  0x00007ff668a00000 + 211f0f3         
+TheDayBefore  0x00007ff668a00000 + 2121d4e         
+TheDayBefore  0x00007ff668a00000 + 211b2a7         
+TheDayBefore  0x00007ff668a00000 + 2130f64         
+TheDayBefore  0x00007ff668a00000 + 211ee80         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>10572</ThreadID>
+<ThreadName>Background Worker #5</ThreadName>
+</Thread>
+<Thread><CallStack>TheDayBefore  0x00007ff668a00000 + 74f634          
+TheDayBefore  0x00007ff668a00000 + 5600c85         
+TheDayBefore  0x00007ff668a00000 + 55de213         
+TheDayBefore  0x00007ff668a00000 + 55a4bab         
+TheDayBefore  0x00007ff668a00000 + 55a07c5         
+TheDayBefore  0x00007ff668a00000 + 559fa65         
+TheDayBefore  0x00007ff668a00000 + 5593f45         
+TheDayBefore  0x00007ff668a00000 + 5595090         
+TheDayBefore  0x00007ff668a00000 + 212bc79         
+TheDayBefore  0x00007ff668a00000 + 212085b         
+TheDayBefore  0x00007ff668a00000 + 2214ab8         
+TheDayBefore  0x00007ff668a00000 + 3c10328         
+TheDayBefore  0x00007ff668a00000 + 3c11d0f         
+TheDayBefore  0x00007ff668a00000 + 211d847         
+TheDayBefore  0x00007ff668a00000 + 211f0f3         
+TheDayBefore  0x00007ff668a00000 + 2121d4e         
+TheDayBefore  0x00007ff668a00000 + 211b2a7         
+TheDayBefore  0x00007ff668a00000 + 2130f64         
+TheDayBefore  0x00007ff668a00000 + 211ee80         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>23592</ThreadID>
+<ThreadName>Background Worker #6</ThreadName>
+</Thread>
+<Thread><CallStack>TheDayBefore  0x00007ff668a00000 + 55e8aa7         
+TheDayBefore  0x00007ff668a00000 + 55a0b99         
+TheDayBefore  0x00007ff668a00000 + 559fa9f         
+TheDayBefore  0x00007ff668a00000 + 5593f45         
+TheDayBefore  0x00007ff668a00000 + 5595090         
+TheDayBefore  0x00007ff668a00000 + 212bc79         
+TheDayBefore  0x00007ff668a00000 + 212085b         
+TheDayBefore  0x00007ff668a00000 + 2214ab8         
+TheDayBefore  0x00007ff668a00000 + 3c10328         
+TheDayBefore  0x00007ff668a00000 + 3c11d0f         
+TheDayBefore  0x00007ff668a00000 + 211d847         
+TheDayBefore  0x00007ff668a00000 + 211f0f3         
+TheDayBefore  0x00007ff668a00000 + 2121d4e         
+TheDayBefore  0x00007ff668a00000 + 211b2a7         
+TheDayBefore  0x00007ff668a00000 + 2130f64         
+TheDayBefore  0x00007ff668a00000 + 211ee80         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>22372</ThreadID>
+<ThreadName>Background Worker #7</ThreadName>
+</Thread>
+<Thread><CallStack>TheDayBefore  0x00007ff668a00000 + 55e8acb         
+TheDayBefore  0x00007ff668a00000 + 55a0b99         
+TheDayBefore  0x00007ff668a00000 + 559fa9f         
+TheDayBefore  0x00007ff668a00000 + 5593f45         
+TheDayBefore  0x00007ff668a00000 + 5595090         
+TheDayBefore  0x00007ff668a00000 + 212bc79         
+TheDayBefore  0x00007ff668a00000 + 212085b         
+TheDayBefore  0x00007ff668a00000 + 2214ab8         
+TheDayBefore  0x00007ff668a00000 + 3c10328         
+TheDayBefore  0x00007ff668a00000 + 3c11d0f         
+TheDayBefore  0x00007ff668a00000 + 211d847         
+TheDayBefore  0x00007ff668a00000 + 211f0f3         
+TheDayBefore  0x00007ff668a00000 + 2121d4e         
+TheDayBefore  0x00007ff668a00000 + 211b2a7         
+TheDayBefore  0x00007ff668a00000 + 2130f64         
+TheDayBefore  0x00007ff668a00000 + 211ee80         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>9136</ThreadID>
+<ThreadName>Background Worker #8</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 213036d         
+TheDayBefore  0x00007ff668a00000 + 21310e5         
+TheDayBefore  0x00007ff668a00000 + 211ee80         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>23112</ThreadID>
+<ThreadName>Background Worker #9</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 213036d         
+TheDayBefore  0x00007ff668a00000 + 21310e5         
+TheDayBefore  0x00007ff668a00000 + 211ee80         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>14592</ThreadID>
+<ThreadName>Background Worker #10</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 213036d         
+TheDayBefore  0x00007ff668a00000 + 21310e5         
+TheDayBefore  0x00007ff668a00000 + 211ee80         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>2484</ThreadID>
+<ThreadName>Background Worker #11</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 213036d         
+TheDayBefore  0x00007ff668a00000 + 21310e5         
+TheDayBefore  0x00007ff668a00000 + 211ee80         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>23956</ThreadID>
+<ThreadName>Background Worker #12</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + c713            
+ntdll         0x00007ffec0ba0000 + d8e2            
+TheDayBefore  0x00007ff668a00000 + 3c0c9cb         
+TheDayBefore  0x00007ff668a00000 + 3c0899b         
+TheDayBefore  0x00007ff668a00000 + 3c0a764         
+TheDayBefore  0x00007ff668a00000 + 3c1054d         
+TheDayBefore  0x00007ff668a00000 + 3c11d0f         
+TheDayBefore  0x00007ff668a00000 + 211d847         
+TheDayBefore  0x00007ff668a00000 + 211f0f3         
+TheDayBefore  0x00007ff668a00000 + 2121d4e         
+TheDayBefore  0x00007ff668a00000 + 211b2a7         
+TheDayBefore  0x00007ff668a00000 + 2130f64         
+TheDayBefore  0x00007ff668a00000 + 211ee80         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>3528</ThreadID>
+<ThreadName>Background Worker #13</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 2188e7e         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>13136</ThreadID>
+<ThreadName>BackgroundThreadPool #0</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 2188e7e         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>3740</ThreadID>
+<ThreadName>BackgroundThreadPool #1</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 211d9f8         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>13980</ThreadID>
+<ThreadName>Reserve Worker #0</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 211d9f8         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>23528</ThreadID>
+<ThreadName>Reserve Worker #1</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 211d9f8         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>11112</ThreadID>
+<ThreadName>Reserve Worker #2</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 211d9f8         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>20608</ThreadID>
+<ThreadName>Reserve Worker #3</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 211d9f8         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>16196</ThreadID>
+<ThreadName>Reserve Worker #4</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 211d9f8         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>2492</ThreadID>
+<ThreadName>Reserve Worker #5</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 211d9f8         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>11968</ThreadID>
+<ThreadName>Reserve Worker #6</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 211d9f8         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>3436</ThreadID>
+<ThreadName>Reserve Worker #7</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 211d9f8         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>16976</ThreadID>
+<ThreadName>Reserve Worker #8</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 211d9f8         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>24404</ThreadID>
+<ThreadName>Reserve Worker #9</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 211d9f8         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>23908</ThreadID>
+<ThreadName>Reserve Worker #10</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 211d9f8         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>14216</ThreadID>
+<ThreadName>Reserve Worker #11</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 211d9f8         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>24440</ThreadID>
+<ThreadName>Reserve Worker #12</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 211d9f8         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>280</ThreadID>
+<ThreadName>Reserve Worker #13</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 3c2ff6c         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>23064</ThreadID>
+<ThreadName>FMediaTicker</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 1620e4          
+ntdll         0x00007ffec0ba0000 + d1014           
+KERNELBASE    0x00007ffebe1c0000 + 46f01           
+TheDayBefore  0x00007ff668a00000 + 3375251         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>22272</ThreadID>
+<ThreadName>HttpManagerThread</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + c80776          
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>16460</ThreadID>
+<ThreadName>OnlineAsyncTaskThreadNull DefaultInstance(1)</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 22340de         
+TheDayBefore  0x00007ff668a00000 + 2189074         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>23796</ThreadID>
+<ThreadName>OutputDeviceRedirector</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 2188e7e         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>8104</ThreadID>
+<ThreadName>IOThreadPool #0</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161b24          
+KERNELBASE    0x00007ffebe1c0000 + 41eda           
+TheDayBefore  0x00007ff668a00000 + 227c068         
+TheDayBefore  0x00007ff668a00000 + 214fb8d         
+TheDayBefore  0x00007ff668a00000 + 1b93a24         
+TheDayBefore  0x00007ff668a00000 + 2188e98         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>23716</ThreadID>
+<ThreadName>IOThreadPool #1</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161b24          
+KERNELBASE    0x00007ffebe1c0000 + 41eda           
+TheDayBefore  0x00007ff668a00000 + 227c068         
+TheDayBefore  0x00007ff668a00000 + 214fb8d         
+TheDayBefore  0x00007ff668a00000 + 1b93a24         
+TheDayBefore  0x00007ff668a00000 + 2188e98         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>16044</ThreadID>
+<ThreadName>IOThreadPool #2</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161b24          
+KERNELBASE    0x00007ffebe1c0000 + 41eda           
+TheDayBefore  0x00007ff668a00000 + 227c068         
+TheDayBefore  0x00007ff668a00000 + 214fb8d         
+TheDayBefore  0x00007ff668a00000 + 1b93a24         
+TheDayBefore  0x00007ff668a00000 + 2188e98         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>23328</ThreadID>
+<ThreadName>IOThreadPool #3</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 212cbcb         
+TheDayBefore  0x00007ff668a00000 + 356831f         
+TheDayBefore  0x00007ff668a00000 + 3569cd7         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>14264</ThreadID>
+<ThreadName>RenderThread 0</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 1620e4          
+ntdll         0x00007ffec0ba0000 + d1014           
+KERNELBASE    0x00007ffebe1c0000 + 46f01           
+TheDayBefore  0x00007ff668a00000 + 228eb18         
+TheDayBefore  0x00007ff668a00000 + 3569d77         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>11216</ThreadID>
+<ThreadName>RTHeartBeat 0</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 21c0806         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>22784</ThreadID>
+<ThreadName>IoDispatcher</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + 3b1e36b         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>10868</ThreadID>
+<ThreadName>FMessageBus.DefaultBus.Router</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 161ae4          
+KERNELBASE    0x00007ffebe1c0000 + 3b1bf           
+TheDayBefore  0x00007ff668a00000 + 228fe1d         
+TheDayBefore  0x00007ff668a00000 + bcecc2          
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>22456</ThreadID>
+<ThreadName>FMOD File Access Coordinator</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 1620e4          
+ntdll         0x00007ffec0ba0000 + d1014           
+KERNELBASE    0x00007ffebe1c0000 + 46f01           
+TheDayBefore  0x00007ff668a00000 + 228eb18         
+TheDayBefore  0x00007ff668a00000 + 14810f6         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>18720</ThreadID>
+<ThreadName>LiveLinkMessageBusDiscoveryManager</ThreadName>
+</Thread>
+<Thread><CallStack>TheDayBefore  0x00007ff668a00000 + 1000e4c         
+TheDayBefore  0x00007ff668a00000 + e80b8c          
+TheDayBefore  0x00007ff668a00000 + e808bd          
+TheDayBefore  0x00007ff668a00000 + 10942ca         
+TheDayBefore  0x00007ff668a00000 + 10965bc         
+TheDayBefore  0x00007ff668a00000 + 242b0e6         
+TheDayBefore  0x00007ff668a00000 + 241c34b         
+TheDayBefore  0x00007ff668a00000 + 2431d8d         
+TheDayBefore  0x00007ff668a00000 + 22f2ab4         
+TheDayBefore  0x00007ff668a00000 + 22fdf98         
+TheDayBefore  0x00007ff668a00000 + 22eb48a         
+TheDayBefore  0x00007ff668a00000 + 22fd4c6         
+TheDayBefore  0x00007ff668a00000 + 230453b         
+TheDayBefore  0x00007ff668a00000 + 230115a         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>8236</ThreadID>
+<ThreadName>FAsyncLoadingThread</ThreadName>
+</Thread>
+<Thread><CallStack>ntdll         0x00007ffec0ba0000 + 1620e4          
+ntdll         0x00007ffec0ba0000 + d1014           
+KERNELBASE    0x00007ffebe1c0000 + 46f01           
+TheDayBefore  0x00007ff668a00000 + 228eb18         
+TheDayBefore  0x00007ff668a00000 + 46a87c1         
+TheDayBefore  0x00007ff668a00000 + 228dc97         
+TheDayBefore  0x00007ff668a00000 + 2288501         
+KERNEL32      0x00007ffebf780000 + 2e8d7           
+ntdll         0x00007ffec0ba0000 + 8c3fc           
+</CallStack>
+<IsCrashed>false</IsCrashed>
+<Registers></Registers>
+<ThreadID>15776</ThreadID>
+<ThreadName>ScreenSaverInhibitor</ThreadName>
+</Thread>
+</Threads>
+</RuntimeProperties>
+<PlatformProperties>
+<PlatformIsRunningWindows>1</PlatformIsRunningWindows>
+<IsRunningOnBattery>false</IsRunningOnBattery>
+<PlatformCallbackResult>0</PlatformCallbackResult>
+<CrashTrigger>0</CrashTrigger>
+</PlatformProperties>
+<EngineData>
+<MatchingDPStatus>WindowsClientNo errors</MatchingDPStatus>
+<RHI.RHIName>NullRHI</RHI.RHIName>
+<DeviceProfile.Name>WindowsClient</DeviceProfile.Name>
+</EngineData>
+<GameData>
+</GameData>
+</FGenericCrashContext>

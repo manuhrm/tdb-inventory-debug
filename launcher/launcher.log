@@ -1,0 +1,132 @@
+============================================================
+19:31:53 launcher (sem versao) | Python 3.14.0 (C:\Users\Manolito\AppData\Local\Python\pythoncore-3.14-64\python.exe) | pasta do jogo: -
+19:31:54 frida 17.26.2 instalado
+19:32:14 pasta do jogo: G:\The Day Before (1372880)\The Day Before
+============================================================
+19:32:48 launcher 2026.11.14-1 | Python 3.14.0 (C:\Users\Manolito\AppData\Local\Python\pythoncore-3.14-64\python.exe) | pasta do jogo: G:\The Day Before (1372880)\The Day Before
+19:32:50 frida 17.26.2 instalado
+19:33:04 AVISO: algo já usa a porta 443 neste PC (servidor local aberto?). Feche-o, senão a ponte do Firestore falha.
+19:33:06 C:\Users\Manolito\Downloads\atualizacao\cliente\cliente_conecta.py:7: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+19:33:06   - escolhe o SteamId do jogador (TDB_STEAMID > cliente\steamid.txt > ID gerado na 1a vez e guardado em
+19:33:06 C:\Users\Manolito\Downloads\atualizacao\cliente\cliente_conecta.py:33: SyntaxWarning: "\c" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\c"? A raw string is also an option.
+19:33:06   """08/11: TDB_JOGO (o launcher passa) > pasta escolhida no launcher (launcher\config.json) > padrao. Devolve (pasta, origem)."""
+19:33:06 C:\Users\Manolito\Downloads\atualizacao\cliente\cliente_conecta.py:40: SyntaxWarning: "\c" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\c"? A raw string is also an option.
+19:33:06   return cfg["pasta_jogo"], "escolhida no launcher (launcher\config.json)"
+19:33:06 C:\Users\Manolito\Downloads\atualizacao\cliente\cliente_conecta.py:152: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
+19:33:06   """Sem steam_settings\disable_lan_only.txt o emulador de Steam bloqueia em silencio o trafego do jogo para IPs fora da rede
+19:33:06 pasta do jogo: G:\The Day Before (1372880)\The Day Before (variavel TDB_JOGO)
+19:33:06 host lido de host.txt: 127.0.0.1
+19:33:06 host remoto: 127.0.0.1 (join para 127.0.0.1:7777, Firestore pela ponte)
+19:33:06 ponte: porta 443 local ocupada ([Errno 10048] error while attempting to bind on address ('127.0.0.1', 443): [winerror 10048] solo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto)). Feche o terminador TLS local, se houver.
+19:33:06 porta 443 local ja tem uma ponte (de outro cliente aberto): usando ela. Nao feche o primeiro cliente.
+19:33:06 modo: LEVE (sem monitores; use --diag para liga-los)
+19:33:06 identidade Steam do cliente: 76561198906311413 (Manolito) - origem: C:\Users\Manolito\AppData\Local\tdb_cliente\steamid.txt
+19:33:06 abrindo o jogo como cliente (tela: padrao do jogo)...
+19:33:07 [cx] tdb_connectex_test armado (IPv4+IPv6, connect e ConnectEx)
+19:33:07 {'tdb': 'tdb_connectex_test armado (IPv4+IPv6, connect e ConnectEx)'}
+19:33:07 [fname] redirecionamento por FName armado (gatilho: ServerSelectd)
+19:33:07 {'tdb': '[fname] redirecionamento por FName armado (gatilho: ServerSelectd)'}
+19:33:07 {'tdb': '[redir] sem host remoto: nada a fazer'}
+19:33:07 [barras] pronto: vida, fome e sede sempre visiveis
+19:33:07 [aparencia] pronto: aparencia dos outros jogadores
+19:33:07 cliente pid=21988. Faca o login, abra o Server Browser e entre no servidor.
+19:33:24 [cx] ConnectEx capturado em 0x7ffe6ff45fe0
+19:33:24 {'tdb': 'ConnectEx capturado em 0x7ffe6ff45fe0'}
+19:33:24 [cx] ConnectEx retorno=0
+19:33:24 {'tdb': 'ConnectEx retorno=0'}
+19:33:33 [cx] connect IPv4 172.217.117.4:443 -> 127.0.0.1:443
+19:33:33 {'tdb': 'connect IPv4 172.217.117.4:443 -> 127.0.0.1:443'}
+19:33:33 [cx] connect IPv4 172.217.117.4:443 -> 127.0.0.1:443
+19:33:33 {'tdb': 'connect IPv4 172.217.117.4:443 -> 127.0.0.1:443'}
+19:33:34 [cx] connect IPv4 66.102.1.95:443 -> 127.0.0.1:443
+19:33:34 {'tdb': 'connect IPv4 66.102.1.95:443 -> 127.0.0.1:443'}
+19:33:34 [cx] connect IPv6 destino Google:443 -> [::1]:443
+19:33:34 {'tdb': 'connect IPv6 destino Google:443 -> [::1]:443'}
+19:33:34 [cx] SSL_CTX_set_verify modo 1 -> 0 (sem verificacao) #1
+19:33:34 {'tdb': 'SSL_CTX_set_verify modo 1 -> 0 (sem verificacao) #1'}
+19:33:34 [cx] SSL_CTX_set_verify modo 1 -> 0 (sem verificacao) #2
+19:33:34 {'tdb': 'SSL_CTX_set_verify modo 1 -> 0 (sem verificacao) #2'}
+19:33:34 [cx] ConnectEx IPv6 destino Google:443 -> [::1]:443
+19:33:34 {'tdb': 'ConnectEx IPv6 destino Google:443 -> [::1]:443'}
+19:33:34 [cx] ConnectEx retorno=0
+19:33:34 {'tdb': 'ConnectEx retorno=0'}
+19:33:37 {'tdb': '[cx] 443 NAO redirecionado: 44.205.191.209'}
+19:35:02 [fname] FName "46.148.232.119" trocado para "127.0.0.1" (bloco 81)
+19:35:02 {'tdb': '[fname] FName "46.148.232.119" trocado para "127.0.0.1" (bloco 81)'}
+19:35:02 [fname] hook de ProcessEvent solto
+19:35:02 {'tdb': '[fname] hook de ProcessEvent solto'}
+19:35:14 {'tdb': '[hud] HUD do grupo ativa (hud 0x2b3f7c0c080)'}
+19:35:14 {'tdb': '[hud] atualizado: 0 linha(s) | PS vivos=0'}
+19:35:15 {'tdb': '[voz] chat de voz: pronto (controle 0x2b40a8a4450)'}
+19:35:15 {'tdb': '[vida] barra de vida do jogo ativa (widget 0x2b39e1d0b00)'}
+19:35:59 {'tdb': '[voz] InitVoice OK (tentativa 1, pawn 0x2b69a075560): microfone aberto'}
+19:36:07 [barras] HUD achado: W_PlayerStats 0x2b68c2c2500
+19:36:07 [barras] ShowAllStats {"Enabled":0}
+19:36:07 [barras] SetVisibility {"InVisibility":0} SetRenderOpacity {"InOpacity":0}
+19:36:07 [barras] barras mostradas (1)
+19:40:15 {'tdb': '[cx] 443 NAO redirecionado: 3.234.138.141'}
+19:40:21 {'tdb': '[hud] HUD do grupo reativada (novo hud 0x2b698f7c080)'}
+19:40:24 {'tdb': '[voz] chat de voz: reativado (controle 0x2b405c52230)'}
+19:40:24 {'tdb': '[vida] barra de vida reativada (widget 0x2b39e1d0b00)'}
+19:41:07 {'tdb': '[voz] InitVoice OK (tentativa 1, pawn 0x2b6975e0010): microfone aberto'}
+19:41:11 [barras] HUD achado: W_PlayerStats 0x2b5233652a0
+19:41:11 [barras] barras mostradas (2)
+19:41:51 File 'G:/The Day Before (1372880)/The Day Before/Engine/Plugins/Runtime/Nvidia/Streamline/Binaries/ThirdParty/Win64/sl.common.dll' is signed by NVIDIA and the signature was verified.
+19:41:51 File 'G:/The Day Before (1372880)/The Day Before/Engine/Plugins/Runtime/Nvidia/Streamline/Binaries/ThirdParty/Win64/sl.dlss_g.dll' is signed by NVIDIA and the signature was verified.
+19:41:51 File 'G:/The Day Before (1372880)/The Day Before/Engine/Plugins/Runtime/Nvidia/Streamline/Binaries/ThirdParty/Win64/sl.reflex.dll' is signed by NVIDIA and the signature was verified.
+19:41:51 WARNING: Database URL not set in the Firebase config.
+19:41:52 jogo fechado/desanexado: process-terminated
+19:41:53 nenhum log em C:\Users\Manolito\AppData\Local\Survival\Saved\Logs
+19:41:53 jogo fechado.
+20:08:30 AVISO: algo já usa a porta 443 neste PC (servidor local aberto?). Feche-o, senão a ponte do Firestore falha.
+20:08:33 C:\Users\Manolito\Downloads\atualizacao\cliente\cliente_conecta.py:7: SyntaxWarning: "\s" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\s"? A raw string is also an option.
+20:08:33   - escolhe o SteamId do jogador (TDB_STEAMID > cliente\steamid.txt > ID gerado na 1a vez e guardado em
+20:08:33 C:\Users\Manolito\Downloads\atualizacao\cliente\cliente_conecta.py:33: SyntaxWarning: "\c" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\c"? A raw string is also an option.
+20:08:33   """08/11: TDB_JOGO (o launcher passa) > pasta escolhida no launcher (launcher\config.json) > padrao. Devolve (pasta, origem)."""
+20:08:33 C:\Users\Manolito\Downloads\atualizacao\cliente\cliente_conecta.py:40: SyntaxWarning: "\c" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\c"? A raw string is also an option.
+20:08:33   return cfg["pasta_jogo"], "escolhida no launcher (launcher\config.json)"
+20:08:33 C:\Users\Manolito\Downloads\atualizacao\cliente\cliente_conecta.py:152: SyntaxWarning: "\d" is an invalid escape sequence. Such sequences will not work in the future. Did you mean "\\d"? A raw string is also an option.
+20:08:33   """Sem steam_settings\disable_lan_only.txt o emulador de Steam bloqueia em silencio o trafego do jogo para IPs fora da rede
+20:08:33 pasta do jogo: G:\The Day Before (1372880)\The Day Before (variavel TDB_JOGO)
+20:08:33 host lido de host.txt: 127.0.0.1
+20:08:33 host remoto: 127.0.0.1 (join para 127.0.0.1:7777, Firestore pela ponte)
+20:08:33 ponte: porta 443 local ocupada ([Errno 10048] error while attempting to bind on address ('127.0.0.1', 443): [winerror 10048] solo se permite un uso de cada dirección de socket (protocolo/dirección de red/puerto)). Feche o terminador TLS local, se houver.
+20:08:33 porta 443 local ja tem uma ponte (de outro cliente aberto): usando ela. Nao feche o primeiro cliente.
+20:08:33 modo: LEVE (sem monitores; use --diag para liga-los)
+20:08:33 identidade Steam do cliente: 76561198906311413 (Manolito) - origem: C:\Users\Manolito\AppData\Local\tdb_cliente\steamid.txt
+20:08:33 limpeza: 1 pastas antigas do Frida apagadas do TEMP
+20:08:33 abrindo o jogo como cliente (tela: padrao do jogo)...
+20:08:35 [cx] tdb_connectex_test armado (IPv4+IPv6, connect e ConnectEx)
+20:08:35 {'tdb': 'tdb_connectex_test armado (IPv4+IPv6, connect e ConnectEx)'}
+20:08:35 [fname] redirecionamento por FName armado (gatilho: ServerSelectd)
+20:08:35 {'tdb': '[fname] redirecionamento por FName armado (gatilho: ServerSelectd)'}
+20:08:35 {'tdb': '[redir] sem host remoto: nada a fazer'}
+20:08:35 [barras] pronto: vida, fome e sede sempre visiveis
+20:08:35 [aparencia] pronto: aparencia dos outros jogadores
+20:08:35 cliente pid=26676. Faca o login, abra o Server Browser e entre no servidor.
+20:08:52 [cx] connect IPv4 172.217.114.4:443 -> 127.0.0.1:443
+20:08:52 {'tdb': 'connect IPv4 172.217.114.4:443 -> 127.0.0.1:443'}
+20:08:53 [cx] connect IPv6 destino Google:443 -> [::1]:443
+20:08:53 {'tdb': 'connect IPv6 destino Google:443 -> [::1]:443'}
+20:08:53 [cx] connect IPv4 142.250.110.95:443 -> 127.0.0.1:443
+20:08:53 {'tdb': 'connect IPv4 142.250.110.95:443 -> 127.0.0.1:443'}
+20:08:53 [cx] SSL_CTX_set_verify modo 1 -> 0 (sem verificacao) #1
+20:08:53 {'tdb': 'SSL_CTX_set_verify modo 1 -> 0 (sem verificacao) #1'}
+20:08:53 [cx] SSL_CTX_set_verify modo 1 -> 0 (sem verificacao) #2
+20:08:53 {'tdb': 'SSL_CTX_set_verify modo 1 -> 0 (sem verificacao) #2'}
+20:08:53 [cx] ConnectEx capturado em 0x7ffe6ff45fe0
+20:08:53 {'tdb': 'ConnectEx capturado em 0x7ffe6ff45fe0'}
+20:08:53 [cx] ConnectEx IPv6 destino Google:443 -> [::1]:443
+20:08:53 {'tdb': 'ConnectEx IPv6 destino Google:443 -> [::1]:443'}
+20:08:53 [cx] ConnectEx retorno=0
+20:08:53 {'tdb': 'ConnectEx retorno=0'}
+20:08:53 [cx] connect IPv4 172.217.114.4:443 -> 127.0.0.1:443
+20:08:53 {'tdb': 'connect IPv4 172.217.114.4:443 -> 127.0.0.1:443'}
+20:08:56 {'tdb': '[cx] 443 NAO redirecionado: 3.234.138.141'}
+20:10:21 File 'G:/The Day Before (1372880)/The Day Before/Engine/Plugins/Runtime/Nvidia/Streamline/Binaries/ThirdParty/Win64/sl.common.dll' is signed by NVIDIA and the signature was verified.
+20:10:21 File 'G:/The Day Before (1372880)/The Day Before/Engine/Plugins/Runtime/Nvidia/Streamline/Binaries/ThirdParty/Win64/sl.dlss_g.dll' is signed by NVIDIA and the signature was verified.
+20:10:21 File 'G:/The Day Before (1372880)/The Day Before/Engine/Plugins/Runtime/Nvidia/Streamline/Binaries/ThirdParty/Win64/sl.reflex.dll' is signed by NVIDIA and the signature was verified.
+20:10:21 WARNING: Database URL not set in the Firebase config.
+20:10:21 jogo fechado/desanexado: process-terminated
+20:10:22 nenhum log em C:\Users\Manolito\AppData\Local\Survival\Saved\Logs
+20:10:22 jogo fechado.

@@ -1,0 +1,49 @@
+19:33:07 {'tdb': 'tdb_connectex_test armado (IPv4+IPv6, connect e ConnectEx)'}
+19:33:07 {'tdb': '[fname] redirecionamento por FName armado (gatilho: ServerSelectd)'}
+19:33:07 {'tdb': '[redir] sem host remoto: nada a fazer'}
+19:33:07 [barras] pronto: vida, fome e sede sempre visiveis
+19:33:07 [aparencia] pronto: aparencia dos outros jogadores
+19:33:24 {'tdb': 'ConnectEx capturado em 0x7ffe6ff45fe0'}
+19:33:24 {'tdb': 'ConnectEx retorno=0'}
+19:33:33 {'tdb': 'connect IPv4 172.217.117.4:443 -> 127.0.0.1:443'}
+19:33:33 {'tdb': 'connect IPv4 172.217.117.4:443 -> 127.0.0.1:443'}
+19:33:34 {'tdb': 'connect IPv4 66.102.1.95:443 -> 127.0.0.1:443'}
+19:33:34 {'tdb': 'connect IPv6 destino Google:443 -> [::1]:443'}
+19:33:34 {'tdb': 'SSL_CTX_set_verify modo 1 -> 0 (sem verificacao) #1'}
+19:33:34 {'tdb': 'SSL_CTX_set_verify modo 1 -> 0 (sem verificacao) #2'}
+19:33:34 {'tdb': 'ConnectEx IPv6 destino Google:443 -> [::1]:443'}
+19:33:34 {'tdb': 'ConnectEx retorno=0'}
+19:33:37 {'tdb': '[cx] 443 NAO redirecionado: 44.205.191.209'}
+19:35:02 {'tdb': '[fname] FName "46.148.232.119" trocado para "127.0.0.1" (bloco 81)'}
+19:35:02 {'tdb': '[fname] hook de ProcessEvent solto'}
+19:35:14 {'tdb': '[hud] HUD do grupo ativa (hud 0x2b3f7c0c080)'}
+19:35:14 {'tdb': '[hud] atualizado: 0 linha(s) | PS vivos=0'}
+19:35:15 {'tdb': '[voz] chat de voz: pronto (controle 0x2b40a8a4450)'}
+19:35:15 {'tdb': '[vida] barra de vida do jogo ativa (widget 0x2b39e1d0b00)'}
+19:35:59 {'tdb': '[voz] InitVoice OK (tentativa 1, pawn 0x2b69a075560): microfone aberto'}
+19:36:07 [barras] HUD achado: W_PlayerStats 0x2b68c2c2500
+19:36:07 [barras] ShowAllStats {"Enabled":0}
+19:36:07 [barras] SetVisibility {"InVisibility":0} SetRenderOpacity {"InOpacity":0}
+19:36:07 [barras] barras mostradas (1)
+19:40:15 {'tdb': '[cx] 443 NAO redirecionado: 3.234.138.141'}
+19:40:21 {'tdb': '[hud] HUD do grupo reativada (novo hud 0x2b698f7c080)'}
+19:40:24 {'tdb': '[voz] chat de voz: reativado (controle 0x2b405c52230)'}
+19:40:24 {'tdb': '[vida] barra de vida reativada (widget 0x2b39e1d0b00)'}
+19:41:07 {'tdb': '[voz] InitVoice OK (tentativa 1, pawn 0x2b6975e0010): microfone aberto'}
+19:41:11 [barras] HUD achado: W_PlayerStats 0x2b5233652a0
+19:41:11 [barras] barras mostradas (2)
+20:08:35 {'tdb': 'tdb_connectex_test armado (IPv4+IPv6, connect e ConnectEx)'}
+20:08:35 {'tdb': '[fname] redirecionamento por FName armado (gatilho: ServerSelectd)'}
+20:08:35 {'tdb': '[redir] sem host remoto: nada a fazer'}
+20:08:35 [barras] pronto: vida, fome e sede sempre visiveis
+20:08:35 [aparencia] pronto: aparencia dos outros jogadores
+20:08:52 {'tdb': 'connect IPv4 172.217.114.4:443 -> 127.0.0.1:443'}
+20:08:53 {'tdb': 'connect IPv6 destino Google:443 -> [::1]:443'}
+20:08:53 {'tdb': 'connect IPv4 142.250.110.95:443 -> 127.0.0.1:443'}
+20:08:53 {'tdb': 'SSL_CTX_set_verify modo 1 -> 0 (sem verificacao) #1'}
+20:08:53 {'tdb': 'SSL_CTX_set_verify modo 1 -> 0 (sem verificacao) #2'}
+20:08:53 {'tdb': 'ConnectEx capturado em 0x7ffe6ff45fe0'}
+20:08:53 {'tdb': 'ConnectEx IPv6 destino Google:443 -> [::1]:443'}
+20:08:53 {'tdb': 'ConnectEx retorno=0'}
+20:08:53 {'tdb': 'connect IPv4 172.217.114.4:443 -> 127.0.0.1:443'}
+20:08:56 {'tdb': '[cx] 443 NAO redirecionado: 3.234.138.141'}
