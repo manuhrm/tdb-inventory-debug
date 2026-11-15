@@ -86,7 +86,7 @@ APPDATA_DIR = os.path.join(SERVICOS, "appdata_host_%d" % PORTA)
 def _banco_corrompido_de_lado(pasta):
     """Se o CURRENT do banco local do Firestore aponta para um MANIFEST que nao existe, move o banco de lado (o jogo cria outro;
     os saves ficam no emulador, nao nesse cache)."""
-    main = os.path.join(pasta, "firestore", "__FIRAPP_DEFAULT", "the-day-before-8f438", "main")
+    main = os.path.join(pasta, "firestore", "__FIRAPP_DEFAULT", "tdb-revival", "main")
     try:
         cur = open(os.path.join(main, "CURRENT"), encoding="ascii", errors="replace").read().strip()
     except OSError:
@@ -104,7 +104,7 @@ def _lock_firestore_livre(pasta):
     """True se o LOCK do banco local do Firestore (LevelDB) desta pasta pode ser aberto sem compartilhamento (ninguem segura)."""
     import ctypes
     from ctypes import wintypes
-    lock = os.path.join(pasta, "firestore", "__FIRAPP_DEFAULT", "the-day-before-8f438", "main", "LOCK")
+    lock = os.path.join(pasta, "firestore", "__FIRAPP_DEFAULT", "tdb-revival", "main", "LOCK")
     if not os.path.exists(lock):
         return True
     k = ctypes.WinDLL("kernel32", use_last_error=True)
@@ -119,7 +119,7 @@ def _quem_segura(pasta):
     try:
         import ctypes
         from ctypes import wintypes
-        main = os.path.join(pasta, "firestore", "__FIRAPP_DEFAULT", "the-day-before-8f438", "main")
+        main = os.path.join(pasta, "firestore", "__FIRAPP_DEFAULT", "tdb-revival", "main")
         if not os.path.isdir(main):
             return "pasta do banco ainda nao existe"
         arqs = [os.path.join(main, n) for n in os.listdir(main)]
@@ -277,7 +277,7 @@ def exportar(motivo, bloquear=False):
         atual = os.path.join(EMU, "emu_data"); novo = os.path.join(EMU, "emu_data_novo"); ant = os.path.join(EMU, "emu_data_anterior")
         shutil.rmtree(novo, ignore_errors=True)
         t0 = time.time()
-        r = subprocess.run(["cmd", "/c", "firebase emulators:export ./emu_data_novo --force --project the-day-before-8f438 --only firestore"],
+        r = subprocess.run(["cmd", "/c", "firebase emulators:export ./emu_data_novo --force --project tdb-revival --only firestore"],
                            cwd=EMU, capture_output=True, text=True, timeout=180)
         if r.returncode != 0 or not os.path.exists(os.path.join(novo, "firebase-export-metadata.json")):
             log("EXPORT Firestore FALHOU (%s): %s" % (motivo, (r.stdout + r.stderr).strip()[-200:])); return
@@ -299,7 +299,7 @@ def esperar(cond, seg, nome):
 
 # IP que os clientes usam para entrar (Linux/VPS: o IP publico). Variavel TDB_IP_PUBLICO; padrao 127.0.0.1 (mesmo PC).
 IP_PUBLICO = os.environ.get("TDB_IP_PUBLICO", "127.0.0.1")
-LISTA_URL = ("http://127.0.0.1:8081/v1/projects/the-day-before-8f438/databases/(default)/documents/"
+LISTA_URL = ("http://127.0.0.1:8081/v1/projects/tdb-revival/databases/(default)/documents/"
              "server-list/us-central/versions/3/servers/%s:%d" % (IP_PUBLICO, PORTA))
 # O jogo usa o NOME do documento (ip:porta) como endereco do join (medido 06/11 18:04: com o doc '127.0.0.1:7777' o cliente
 # mandava o join para o proprio PC mesmo com o host na VPS). Nome exibido: TDB_NOME_SERVIDOR (padrao SERVIDOR-LOCAL).
@@ -380,7 +380,7 @@ if SEM_SERVICOS:
             log("ABORTADO: suba os servicos antes (linux/iniciar_servicos.sh)"); sys.exit(1)
 elif not escutando_tcp(8081, "127.0.0.1"):
     importar = "--import ./emu_data " if os.path.isdir(os.path.join(EMU, "emu_data")) else ""
-    iniciar(["cmd.exe", "/c", "firebase emulators:start --only firestore --project the-day-before-8f438 " + importar + "--export-on-exit ./emu_data"], EMU, "firestore_emu")
+    iniciar(["cmd.exe", "/c", "firebase emulators:start --only firestore --project tdb-revival " + importar + "--export-on-exit ./emu_data"], EMU, "firestore_emu")
     if not esperar(lambda: escutando_tcp(8081, "127.0.0.1"), 90, "Firestore em 127.0.0.1:8081"): sys.exit(1)
 else:
     log("ok: Firestore ja em 127.0.0.1:8081")
