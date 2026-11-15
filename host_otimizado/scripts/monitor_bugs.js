@@ -28,12 +28,12 @@ const porPtr = new Map();   // UFunction ptr (str) -> 'Classe.Funcao'
 
 // ---- filtro nativo ----
 // lista de alvos em memoria do JS (gravavel); a memoria do proprio CModule nao aceitou escrita (1a versao nao achava nada)
-const alvosArr = Memory.alloc(32 * 8), nAlvos = Memory.alloc(8); nAlvos.writeS32(0);
+const alvosArr = Memory.alloc(256 * 8), nAlvos = Memory.alloc(8); nAlvos.writeS32(0);
 const notify = new NativeCallback(function (obj, f, parms) { try { tratar(obj, f, parms); } catch (e) {} }, 'void', ['pointer', 'pointer', 'pointer']);
 const cm = new CModule(`
 #include <gum/guminterceptor.h>
 extern void notify (void * obj, void * fn, void * parms);
-extern void * alvos[32];
+extern void * alvos[256];
 extern int nalvos;
 void onEnter (GumInvocationContext * ic)
 {
@@ -44,27 +44,45 @@ void onEnter (GumInvocationContext * ic)
 }
 `, { notify, alvos: alvosArr, nalvos: nAlvos });
 
+const INV_FN_RE = /(inventory|inventario|item|stash|cash|loot|pickup|drop|equip|container|backpack|storage|sharpsync|collect|consume|slot|chest|bag)/i;
+const INV_CLASS_RE = /(sharpsync|inventory|stash|loot|container|survpc|survivalplayer|item)/i;
+const INV_ACTION_RE = /(add|remove|move|update|load|save|pickup|drop|equip|use|collect|consume|set|server|client|multicast|sync|transfer|store|interact)/i;
+function flagsTxt(o) {
+  try {
+    const f = o.add(0xb0).readU32(), a = [];
+    if (f & 0x40) a.push('NET');
+    if (f & 0x80) a.push('RELIABLE');
+    if (f & 0x200000) a.push('SERVER');
+    if (f & 0x1000000) a.push('CLIENT');
+    if (f & 0x4000) a.push('MULTICAST');
+    if (f & 0x800) a.push('EVENT');
+    if (f & 0x400) a.push('NATIVE');
+    return '0x' + (f >>> 0).toString(16) + (a.length ? '[' + a.join('|') + ']' : '');
+  } catch (e) { return '?'; }
+}
 function procurarAlvos() {
   const faltam = []; for (const c in ALVOS) for (const f of ALVOS[c]) if (![...porPtr.values()].includes(c + '.' + f)) faltam.push(c + '.' + f);
-  if (!faltam.length) return true;
   const arr = B.add(0x7ccda10), objs = arr.readPointer(), num = arr.add(0x14).readS32(), nch = arr.add(0x1c).readS32();
   let novos = 0;
   for (let i = 0; i < num; i++) {
     const ch = (i / 0x10000) | 0; if (ch >= nch) break;
     try {
       const chunk = objs.add(ch * 8).readPointer(); if (chunk.isNull()) continue;
-      const o = chunk.add((i % 0x10000) * 0x18).readPointer(); if (o.isNull()) continue;
-      const nf = nome(o); let lista = null, cls = null;
-      for (const c in ALVOS) if (ALVOS[c].indexOf(nf) >= 0) { cls = c; lista = ALVOS[c]; break; }
-      if (!lista || classe(o) !== 'Function') continue;
-      const outer = o.add(0x20).readPointer(); if (outer.isNull() || nome(outer) !== cls) continue;
+      const o = chunk.add((i % 0x10000) * 0x18).readPointer(); if (o.isNull() || classe(o) !== 'Function') continue;
+      const nf = nome(o), outer = o.add(0x20).readPointer(); if (outer.isNull()) continue;
+      const cls = nome(outer);
+      let alvo = !!(ALVOS[cls] && ALVOS[cls].indexOf(nf) >= 0);
+      if (!alvo) alvo = INV_FN_RE.test(nf) || (INV_CLASS_RE.test(cls) && INV_ACTION_RE.test(nf));
+      if (!alvo) continue;
       const k = o.toString(); if (porPtr.has(k)) continue;
-      const n = nAlvos.readS32(); if (n >= 32) break;
-      alvosArr.add(n * 8).writePointer(o); nAlvos.writeS32(n + 1); porPtr.set(k, cls + '.' + nf); novos++;
+      const n = nAlvos.readS32(); if (n >= 256) break;
+      alvosArr.add(n * 8).writePointer(o); nAlvos.writeS32(n + 1); porPtr.set(k, cls + '.' + nf);
+      log('ALVO ' + cls + '.' + nf + ' flags=' + flagsTxt(o));
+      novos++;
     } catch (e) {}
   }
-  if (novos) log('alvos vigiados: ' + [...porPtr.values()].join(', '));
-  return false;
+  if (novos) log('alvos rastreados no total: ' + porPtr.size + ' (novos nesta busca: ' + novos + ')');
+  return faltam.every(x => [...porPtr.values()].includes(x)) && novos === 0;
 }
 
 // ---- (1) itens ----
@@ -115,14 +133,26 @@ function tratarTiro(z) {
 }
 setInterval(function () { if (nTiros) log('tiros em zumbis no ultimo minuto: ' + nTiros + ' (longe: ' + nLonge + ')'); nTiros = 0; nLonge = 0; }, 60000);
 
+let chamadasInvTrace = 0;
 function tratar(obj, f, parms) {
   const qual = porPtr.get(f.toString()); if (!qual) return;
   const nf = qual.split('.')[1];
   if (nf === 'ReceivePointDamage') { tratarTiro(obj); return; }
   if (nf === 'UpdateData' || nf === 'UpdateStash') { tratarItens(obj, nf, arrStr(parms)); return; }
   if (nf === 'Set_Stash_Money') { log(qual + ' int=' + parms.readS32()); return; }
-  log(qual + ' n=' + arrStr(parms).length + ' [' + curto(arrStr(parms)) + ']');
+  if (['StashLoader', 'StashLocal', 'UpdateCash', 'UpdateCashServ', 'CashLoader', 'CashLocal'].indexOf(nf) >= 0) {
+    const lista = arrStr(parms); log(qual + ' n=' + lista.length + ' [' + curto(lista) + ']'); return;
+  }
+  chamadasInvTrace++;
+  if (chamadasInvTrace <= 300) {
+    log('RPC/INVENTARIO CALL ' + qual + ' flags=' + flagsTxt(f) +
+        ' obj=' + classe(obj) + '/' + nome(obj) + ' parms=' + parms);
+  }
 }
+setInterval(function () {
+  log('rastreio inventario: ' + chamadasInvTrace + ' chamada(s) de funcoes adicionais no ultimo intervalo; alvos=' + porPtr.size);
+  chamadasInvTrace = 0;
+}, 30000);
 
 Interceptor.attach(B.add(0x24077b0), cm);
 // repete a busca a cada 20 s; para quando achar tudo ou quando os essenciais ja estiverem e passarem 10 tentativas (cada busca ~5 s na thread do Frida)
