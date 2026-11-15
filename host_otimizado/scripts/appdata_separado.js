@@ -1,7 +1,7 @@
 // appdata_separado.js (2026-11-06) - da a ESTA instancia do jogo uma pasta LocalAppData propria.
 // Motivo (medido 06/11 11:51, captura_excecao.js): a 2a instancia na mesma conta lanca firebase::firestore::FirestoreInternalError e cai
 // (0xe06d7363 em KERNELBASE+0xc408a): o banco local do Firestore (LevelDB) fica em %LOCALAPPDATA%\firestore\__FIRAPP_DEFAULT\
-// the-day-before-8f438\main, com arquivo LOCK, e so um processo por usuario consegue abri-lo.
+// tdb-revival\main, com arquivo LOCK, e so um processo por usuario consegue abri-lo.
 // Como: hooks em shell32!SHGetKnownFolderPath (FOLDERID_LocalAppData) e shell32!SHGetFolderPathW (CSIDL_LOCAL_APPDATA 0x1c),
 // devolvendo APPDATA_DIR (injetado pelo runner). Tudo que o jogo grava em LocalAppData (Firestore, Saved, logs) vai para la.
 (function () {
