@@ -3465,11 +3465,21 @@ if (!main) {
       autoQ.step = 90;
     }
   }
-  // Diagnostico do inventario (so leitura), uma vez por lancamento ao atingir READY.
-  // Loga os slots de arma/roupa/mochila do personagem e os primeiros itens de ContainerItems.
+  // Diagnostico do inventario (so leitura): independente da fase READY.
+  // Aguarda 6s desde que detecta/troca o pawn para evitar ler durante o spawn.
+  // Loga slots de arma/roupa/mochila e os primeiros itens de ContainerItems.
   var invDumpDone = false;
+  var invDumpPawn = null;
+  var invDumpAt = 0;
   function invDumpTick() {
-    if (invDumpDone || phase !== PH.READY || !survPawnObj || survPawnObj.isNull()) return;
+    if (invDumpDone || !survPawnObj || survPawnObj.isNull()) return;
+    if (!invDumpPawn || !invDumpPawn.equals(survPawnObj)) {
+      invDumpPawn = survPawnObj;
+      invDumpAt = Date.now();
+      log('INVDUMP pawn detectado; aguardando 6s para leitura (fase=' + phase + ')');
+      return;
+    }
+    if (Date.now() - invDumpAt < 6000) return;
     invDumpDone = true;
     log('INVDUMP inicio pawn=' + survPawnObj);
     const slots = [
