@@ -37,7 +37,7 @@ HOST = RAIZ / "host" / "servidor_host.py"
 # 10/11: o Offline usa o host_otimizado (replicacao em C, sem o limite de 150 atores sempre relevantes) com os mesmos argumentos
 # da VPS. O host normal (replicacao em JS a cada quadro + monitores) rodava a 9-15 quadros/s com 1 jogador: atraso e itens demorando.
 HOST_OTIM = RAIZ / "host_otimizado" / "servidor_host.py"
-ARGS_HOST_OFFLINE = ["--appdata-separado", "--sem-monitores"]   # 10/11: resgate de queda (resgate_queda.js) ligado dentro do host
+ARGS_HOST_OFFLINE = ["--appdata-separado"]  # mantem monitores de diagnostico ativos no Offline   # 10/11: resgate de queda (resgate_queda.js) ligado dentro do host
 HOST_TXT = RAIZ / "cliente" / "host.txt"
 LOG_HOST = Path(os.environ.get("TEMP", ".")) / "servidor_host_headless.out"
 SEM_JANELA = getattr(subprocess, "CREATE_NO_WINDOW", 0)
@@ -856,15 +856,14 @@ class Launcher:
         self._rodar("jogar online", t)
 
     def jogar_offline(self):
-        if not HOST.exists():
+        if not HOST_OTIM.exists() and not HOST.exists():
             messagebox.showwarning("TDB Launcher", self.t("dlg_falta_host")); return
         if not self._conferir_pasta():
             return
         self.modo = "offline"; self.fila.put(("botoes", True))
 
         def t():
-            if not self._aplicar_atualizacao():
-                return
+            # Offline nao aplica atualizacoes automaticamente: preserva scripts locais e diagnosticos.
             self.estado("estado_subindo")
             try:
                 if LOG_HOST.exists():
