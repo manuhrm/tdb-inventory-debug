@@ -338,6 +338,17 @@ def main() -> int:
     script = session.create_script(source)
     script.on("message", on_message)
     script.load()
+    # 15/11: monitor somente leitura das chamadas de inventario no cliente Offline.
+    if LOCAL:
+        monitor_inv = DIR / "monitor_inventario_cliente.js"
+        if monitor_inv.exists():
+            try:
+                script_inv = session.create_script(monitor_inv.read_text(encoding="utf-8"))
+                script_inv.on("message", on_message)
+                script_inv.load()
+                print("sonda de inventario no cliente carregada (somente leitura)", flush=True)
+            except Exception as e:
+                print(f"AVISO: sonda de inventario no cliente nao carregou: {e}", flush=True)
     # 07/11: vida, fome e sede sempre na tela (o HUD do jogo so as mostra quando um valor sobe ou fica critico). Script separado:
     # um erro nele nao derruba os outros. --sem-barras-fixas desliga.
     barras = DIR / "barras_sempre_visiveis.js"
