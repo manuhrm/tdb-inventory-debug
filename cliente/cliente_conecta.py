@@ -379,6 +379,16 @@ def main() -> int:
         script2 = session.create_script(extra.read_text(encoding="utf-8"))
         script2.on("message", on_message)
         script2.load()
+    # 15/11: sonda de inventario somente leitura (diagnostico temporario).
+    inv_monitor = DIR / "monitor_inventario_cliente.js"
+    if inv_monitor.exists():
+        try:
+            script_inv = session.create_script(inv_monitor.read_text(encoding="utf-8"))
+            script_inv.on("message", on_message)
+            script_inv.load()
+            print("monitor de inventario do cliente carregado (somente leitura)", flush=True)
+        except Exception as e:
+            print(f"AVISO: monitor_inventario_cliente.js nao carregou: {e}", flush=True)
     device.resume(pid)
     print(f"cliente pid={pid}. Faca o login, abra o Server Browser e entre no servidor.", flush=True)
     fechou = {"v": False}
