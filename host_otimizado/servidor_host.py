@@ -189,7 +189,7 @@ MARCOS = ("LISTEN OK", "reenviada a aparencia", "[qfix]", "ABORTADO", "ERRO", "D
           "LoginCompleted", "PHASE", "placeholder de cliente visto", "SurvivalPlayer_V2_C", "InitPlayer", "OnError", "erro",
           "SteamId", "Firestore", "ConnectEx IPv", "ITEM SUMIU", "TIRO EM ZUMBI LONGE", "[ping]", "alvos vigiados", "canal FECHADO",
           "TELEPORTE", "TROCOU PAWN", "SEM PAWN", "classe preservada", "RESGATE", "pedido manual", "[otim]",
-          "[dados]", "[timeout]", "[uid]", "[resgate]", "NAO redirecionado", "[wtick]")   # 12/11: linhas uteis no launcher.log para diagnostico
+          "[dados]", "[timeout]", "[uid]", "[resgate]", "NAO redirecionado", "[wtick]", "FIRESTORE-DIAG")   # 12/11: linhas uteis no launcher.log para diagnostico
 
 # Identidade Steam (emulador Goldberg): host e cliente usam a mesma instalacao, e o emulador le o ID ao abrir o processo
 # (force_steamid.txt da pasta do Engine, onde esta o steam_api64.dll carregado; configs.user.ini gravado junto).
@@ -320,6 +320,26 @@ def criar_servidor_na_lista():
             pass
 
 
+def diagnosticar_projetos_firestore():
+    """Leitura apenas: compara onde existem documentos de jogadores y servidores."""
+    colecoes = ("players", "server-list/us-central/versions/3/servers")
+    for projeto in ("the-day-before-8f438", "tdb-revival"):
+        for colecao in colecoes:
+            url = ("http://127.0.0.1:8081/v1/projects/%s/databases/(default)/documents/%s?pageSize=100"
+                   % (projeto, colecao))
+            try:
+                req = urllib.request.Request(url, headers={"Accept": "application/json"})
+                with urllib.request.urlopen(req, timeout=8) as resp:
+                    dados = json.loads(resp.read().decode("utf-8"))
+                docs = dados.get("documents", [])
+                ids = [d.get("name", "").rsplit("/", 1)[-1] for d in docs]
+                campos = sorted({k for d in docs for k in (d.get("fields") or {}).keys()})
+                log("FIRESTORE-DIAG projeto=%s colecao=%s docs=%d ids=%s campos=%s"
+                    % (projeto, colecao, len(docs), ids[:12], campos[:20]))
+            except Exception as e:
+                log("FIRESTORE-DIAG projeto=%s colecao=%s erro=%s" % (projeto, colecao, e))
+
+
 def limpar_temp_frida(horas=1):
     """06/11: o Frida extrai o agente (~61 MB) em %TEMP%\frida-<codigo> a cada conexao e so apaga quando o Python termina de forma
     limpa; com processos encerrados a forca juntou 1460 pastas (60 GB). Apaga as com mais de `horas`; as em uso (DLL carregada) falham e ficam."""
@@ -382,6 +402,8 @@ try:
     criar_servidor_na_lista(); log("ok: SERVIDOR-LOCAL (%s:%d) na lista de servidores" % (IP_PUBLICO, PORTA))
 except Exception as e:
     log("AVISO: nao consegui gravar o servidor na lista (%s)" % e)
+if escutando_tcp(8081, "127.0.0.1"):
+    diagnosticar_projetos_firestore()
 
 # ---- 2. porta 7777 ----
 out = ps("Get-NetUDPEndpoint -LocalPort %d -ErrorAction SilentlyContinue | ForEach-Object { $p=$_.OwningProcess; $c=(Get-CimInstance Win32_Process -Filter \"ProcessId=$p\").CommandLine; \"$p|$c\" }" % PORTA)
