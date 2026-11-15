@@ -3511,6 +3511,11 @@ if (!main) {
     } catch (eC) { log('INVDUMP ContainerItems erro: ' + eC); }
     log('INVDUMP fim');
   }
+  // Temporizador independiente: HOST_LEVE suelta el tick principal tras el travel.
+  // La captura debe seguir activa hasta que aparezca el pawn real del jugador.
+  var invDumpTimer = setInterval(function () {
+    try { invDumpTick(); } catch (eID) { log('INVDUMP erro: ' + eID); }
+  }, 1000);
 
   // LSFLAGS (so leitura): amostra a cada 200 ms flags/visibilidade que podem trazer a tela de carregamento inicial de volta.
   // Loga apenas mudancas, com timestamp ISO igual ao do LSWIDE, para cruzar com os eventos do tracer.
@@ -3759,7 +3764,6 @@ if (!main) {
     try { if (Date.now() < lsWideUntil) lsFlagsTick(); } catch (eLT) { log('LSFLAGS erro ' + eLT); }
     try { runAutoHub(); } catch (eAH) { log('AUTOHUB erro: ' + eAH); }
     // AUTOQUEST desativado para testar se a primeira quest aparece sozinha (runAutoQuest nao e chamado).
-    try { invDumpTick(); } catch (eID) { log('INVDUMP erro: ' + eID); }
     try {
       // v71: fila por arquivo. Executa cmd_<ultimo+1>.json; se nao existir, cai no cmd.json (compatibilidade).
       // fila de comandos de diagnostico (cmd.json / cmd_<n>.json) em %TEMP%\tdb_host_cmd\ (opcional; sem arquivo, nada acontece)
